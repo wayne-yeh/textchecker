@@ -1,10 +1,10 @@
-package com.example.control_f;
+package com.example.textchecker;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ControlFApplicationTests {
+class TextCheckerApplicationTests {
 
     @Test
     void contextLoads() {

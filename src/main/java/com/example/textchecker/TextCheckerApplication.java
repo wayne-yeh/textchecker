@@ -1,13 +1,13 @@
-package com.example.control_f;
+package com.example.textchecker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ControlFApplication {
+public class TextCheckerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ControlFApplication.class, args);
+        SpringApplication.run(TextCheckerApplication.class, args);
     }
 
 }
