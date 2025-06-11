@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>control_f</artifactId>
+    <artifactId>textchecker</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>control_f</name>
-    <description>control_f</description>
+    <name>textchecker</name>
+    <description>textchecker</description>
     <url/>
     <licenses>
         <license/>
@@ -47,6 +47,10 @@
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

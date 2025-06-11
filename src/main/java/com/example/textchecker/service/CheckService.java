@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class CheckService {
@@ -16,12 +18,12 @@ public class CheckService {
     private ForbiddenWordRepository wordRepository;
 
     public CheckResponse check(String content) {
-        List<String> found = new ArrayList<>();
+        Map<String, String> found = new HashMap<>();
 
         List<ForbiddenWord> words = wordRepository.findAll();
         for (ForbiddenWord word : words) {
             if (content.contains(word.getWord())) {
-                found.add(word.getWord());
+                found.put(word.getWord(), word.getCategory());
             }
         }
 

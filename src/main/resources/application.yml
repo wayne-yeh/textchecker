@@ -1,6 +1,11 @@
 spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    cache: false
   application:
-    name: control_f
+    name: textchecker
 
   datasource:
     url: jdbc:h2:mem:testdb

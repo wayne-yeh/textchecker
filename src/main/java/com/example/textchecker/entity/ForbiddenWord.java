@@ -11,6 +11,7 @@ public class ForbiddenWord {
     private Long id;
 
     private String word;
+    private String category;
 
     public Long getId() {
         return id;
@@ -26,5 +27,13 @@ public class ForbiddenWord {
 
     public void setWord(String word) {
         this.word = word;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
