@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 
 @RestController
 @RequestMapping("/check")
+@CrossOrigin(origins = "*")
 public class CheckController {
 
     @Autowired

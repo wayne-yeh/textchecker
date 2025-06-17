@@ -18,16 +18,17 @@ public class CheckService {
     private ForbiddenWordRepository wordRepository;
 
     public CheckResponse check(String content) {
-        Map<String, String> found = new HashMap<>();
-
+        Map<String, String> foundMap = new HashMap<>();
+        List<String> foundString = new ArrayList<>();
         List<ForbiddenWord> words = wordRepository.findAll();
         for (ForbiddenWord word : words) {
             if (content.contains(word.getWord())) {
-                found.put(word.getWord(), word.getCategory());
+                foundString.add(word.getWord()+"("+word.getCategory()+")");
+                foundMap.put(word.getWord(), word.getCategory());
             }
         }
 
-        return new CheckResponse(found.isEmpty(), found);
+        return new CheckResponse(foundMap.isEmpty(), foundString, foundMap);
     }
 }
 

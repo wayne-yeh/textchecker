@@ -1,14 +1,17 @@
 package com.example.textchecker.dto;
 
+import java.util.List;
 import java.util.Map;
 
 public class CheckResponse {
     private boolean isPass;
     private Map<String, String> ileagalWordsAndType;
     private int illegalWordCount;
+    private List<String> ileagalWords;
 
-    public CheckResponse(boolean isPass, Map<String, String> ileagalWordsAndType) {
+    public CheckResponse(boolean isPass, List<String> ileagalWords, Map<String, String> ileagalWordsAndType) {
         this.isPass = isPass;
+        this.ileagalWords = ileagalWords;
         this.ileagalWordsAndType = ileagalWordsAndType;
         this.illegalWordCount = ileagalWordsAndType != null ? ileagalWordsAndType.size() : 0;
     }
@@ -35,6 +38,14 @@ public class CheckResponse {
 
     public void setIllegalWordCount(int illegalWordCount) {
         this.illegalWordCount = illegalWordCount;
+    }
+
+    public List<String> getIleagalWords() {
+        return ileagalWords;
+    }
+
+    public void setIleagalWords(List<String> ileagalWords) {
+        this.ileagalWords = ileagalWords;
     }
 }
 
